@@ -1,0 +1,321 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-hover: #fe9900;
+  --color-primary: #f26522;
+  --color-muted-orange: #fde9d4;
+  --color-light-orange: #fff4e6;
+  --color-warm-beige: #fffaf5;
+  --color-subtle-bg: #fdf8f4;
+}
+
+@custom-variant hover {
+  @media (min-width: 640px) {
+    &:hover {
+      @slot;
+    }
+  }
+}
+
+/* Enhanced hover fix for Windows 11 - Only applies when hover is disabled */
+@media screen and (hover: none) {
+
+  /* Force all Tailwind hover classes to work */
+  [class*="hover:"]:hover {
+    transition: all 0.2s ease !important;
+  }
+
+  .hover\:bg-primary:hover {
+    background-color: var(--color-primary) !important;
+  }
+
+  .hover\:text-white:hover {
+    color: white !important;
+  }
+
+  .hover\:opacity-80:hover {
+    opacity: 0.8 !important;
+  }
+
+  .hover\:opacity-90:hover {
+    opacity: 0.9 !important;
+  }
+
+  .hover\:scale-105:hover {
+    transform: scale(1.05) !important;
+  }
+
+  .hover\:scale-110:hover {
+    transform: scale(1.1) !important;
+  }
+
+  .hover\:shadow-lg:hover {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+  }
+
+  .hover\:shadow-md:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  }
+
+  .hover\:bg-gray-100:hover {
+    background-color: rgb(243 244 246) !important;
+  }
+
+  .hover\:bg-gray-200:hover {
+    background-color: rgb(229 231 235) !important;
+  }
+
+  .hover\:text-gray-800:hover {
+    color: rgb(31 41 55) !important;
+  }
+
+  .hover\:border-primary:hover {
+    border-color: var(--color-primary) !important;
+  }
+
+  /* Specific fixes for OfferCard component */
+  .hover\:shadow-xl:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+  }
+
+  .hover\:bg-red-100:hover {
+    background-color: rgb(254 226 226) !important;
+  }
+
+  .hover\:text-red-500:hover {
+    color: rgb(239 68 68) !important;
+  }
+
+  .hover\:bg-primary-hover:hover {
+    background-color: var(--color-hover) !important;
+  }
+
+  .group-hover\:text-orange-600:hover {
+    color: rgb(234 88 12) !important;
+  }
+
+  /* Force nested hover elements */
+  button:hover .hover\:text-red-500 {
+    color: rgb(239 68 68) !important;
+  }
+
+  /* Force all button and icon hovers */
+  button:hover {
+    transition: all 0.2s ease !important;
+  }
+
+  button:hover svg {
+    transition: all 0.2s ease !important;
+  }
+
+  /* Group hover support */
+  .group:hover [class*="group-hover:"] {
+    transition: all 0.2s ease !important;
+  }
+}
+
+/* Fallback for all screens (if the above doesn't work) */
+@media screen {
+
+  /* This ensures hover works on all devices as backup */
+  [class*="hover:"]:hover {
+    transition: all 0.2s ease;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-muted-orange {
+  background-color: var(--color-muted-orange);
+}
+
+.bg-light-orange {
+  background-color: var(--color-light-orange);
+}
+
+.bg-warm-beige {
+  background-color: var(--color-warm-beige);
+}
+
+.bg-subtle-bg {
+  background-color: var(--color-subtle-bg);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+/* Required Tailwind ring support for custom color */
+.ring-primary {
+  --tw-ring-color: var(--color-primary);
+}
+
+.focus\:ring-primary:focus {
+  --tw-ring-color: var(--color-primary);
+}
+
+/* Optional hover background override */
+.hover\:bg-primary-hover:hover {
+  background-color: var(--color-hover);
+}
+
+.hover\:text-hover:hover {
+  color: var(--color-primary);
+}
+
+.glass-effect {
+  backdrop-filter: blur(4px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg,
+      #000000 0%,
+      #3e1e00 20%,
+      #7a3200 40%,
+      #fe9900 60%,
+      #f26522 80%,
+      #fff0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+
+.title-gradient {
+  background: linear-gradient(90deg,
+      #fffaf5 0%,
+      /* warm white */
+      #fde9d4 20%,
+      /* soft beige */
+      #fecc8b 40%,
+      /* light orange */
+      #fe9900 60%,
+      /* bright orange */
+      #f26522 80%,
+      /* brand orange */
+      #fff4e6 100%
+      /* very soft finish */
+    );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+
+
+@keyframes fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes circle-grow {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.animate-fade-in-scale {
+  animation: fade-in-scale 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-circle-grow {
+  animation: circle-grow 1s ease-out forwards;
+}
+.animation-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-1200 {
+  animation-delay: 1.2s;
+}
+
+.animation-delay-1400 {
+  animation-delay: 1.4s;
+}
+
+.animation-delay-1600 {
+  animation-delay: 1.6s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
