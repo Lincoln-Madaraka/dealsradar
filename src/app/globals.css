@@ -214,7 +214,7 @@ body {
   color: transparent;
   font-weight: 800;
 }
-.text-gradient-dark {
+.dark .text-gradient {
   background: linear-gradient(90deg,
       #ffffff 0%,
       #d6c8b0 20%,
