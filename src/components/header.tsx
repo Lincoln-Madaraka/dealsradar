@@ -118,10 +118,10 @@ const Header: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled ? "border-b border-gray-200/50 backdrop-blur-md" : "backdrop-blur-sm"} ${isVisible ? "translate-y-0" : "-translate-y-full"} glass-effect`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled ? "border-b border-gray-200/50 backdrop-blur-md" : "backdrop-blur-sm"} ${isVisible ? "translate-y-0" : "-translate-y-full"} glass-effect dark:bg-gray-800`}
       role="navigation"
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3 ">
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logo.png"

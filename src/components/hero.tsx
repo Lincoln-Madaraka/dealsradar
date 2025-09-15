@@ -62,7 +62,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative h-[80vh] overflow-hidden mt-16">
+      <section className="relative h-[80vh] overflow-hidden mt-16 dark:bg-black">
         {/* Background Images with Transitions */}
         {slides.map((slide, index) => (
           <div
@@ -76,7 +76,8 @@ const Hero = () => {
                 backgroundImage: `url(${slide.backgroundImage})`,
               }}
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-white/20 dark:bg-black/50 transition-colors duration-300" />
+
           </div>
         ))}
 

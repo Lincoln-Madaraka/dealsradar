@@ -6,7 +6,7 @@ import React from 'react';
 
 const page = () => {
     return (
-        <div className="min-h-screen bg-gradient-to-br from-orange-850 via-amber-850 to-yellow-850">
+        <div className="min-h-screen bg-gradient-to-br from-orange-850 via-amber-850 to-yellow-850 dark:bg-gray-800">
             <section className="relative h-[60vh] overflow-hidden">
                 {/* Background image */}
                 <div
