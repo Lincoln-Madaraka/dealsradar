@@ -36,7 +36,7 @@ const setInitialThemeScript = `(function() {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Run before React hydration to avoid flash */}
         <script dangerouslySetInnerHTML={{ __html: setInitialThemeScript }} />
