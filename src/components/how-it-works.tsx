@@ -6,20 +6,20 @@ import WorkCard from "./work-card";
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-20 bg-white md:h-screen">
+    <section id="how-it-works" className="py-20 bg-white md:h-screen dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 dark:text-white">
             How It Works
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
             DealsRadar aggregates real-time discounts and offers from top retail
             brands, allowing users to shop smart by seeing the best deals across
             multiple outlets — all from a single platform.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-8 mt-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-8 mt-6 dark:text-gray-600">
           <WorkCard
             icon={<BiSearch size={24} />}
             title="Search & Compare"

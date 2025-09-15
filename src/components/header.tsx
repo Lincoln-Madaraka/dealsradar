@@ -133,7 +133,7 @@ const Header: React.FC = () => {
           />
           <div className="hidden sm:block">
             <h1 className="font-bold text-lg lg:text-xl text-gradient truncate">DealsRadar</h1>
-            <p className="text-xs lg:text-sm text-gray-500 -mt-1 truncate">Shop Smart, Save Hard</p>
+            <p className="text-xs lg:text-sm text-gray-500 -mt-1 truncate dark:text-white italic">Shop Smart, Save Hard</p>
           </div>
         </Link>
 
