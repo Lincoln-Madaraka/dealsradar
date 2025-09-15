@@ -7,7 +7,7 @@ import WorkCard from "./work-card";
 const HowItWorks = () => {
   return (
     <section id="how-it-works" className="py-20 bg-white md:h-screen dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 dark:text-white">
             How It Works

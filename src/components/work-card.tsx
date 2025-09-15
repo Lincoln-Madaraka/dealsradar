@@ -12,9 +12,9 @@ const WorkCard: React.FC<HowItWorksCardProps> = ({
   description,
 }) => {
   return (
-    <div className="text-center dark:bg-gray-900">
+    <div className="text-center">
       {/* group is here */}
-      <div className="group p-4 rounded-2xl hover:shadow-lg transition-shadow duration-300">
+      <div className="group p-4 rounded-2xl hover:shadow-lg transition-shadow duration-300 bg-white dark:bg-gray-900">
         {/* icon wrapper */}
         <div className="w-16 h-16 rounded-full bg-orange-500 mx-auto mb-6 flex items-center justify-center transition-colors duration-300 group-hover:bg-orange-100">
           {/* icon with group-hover */}
