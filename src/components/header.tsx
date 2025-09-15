@@ -148,7 +148,8 @@ const Header: React.FC = () => {
             Sign Up
           </Link>
         </div>
-
+        <div className="flex items-center gap-2 lg:hidden">
+        <ThemeToggle />
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-label={isMobileOpen ? "Close menu" : "Open menu"}
@@ -156,12 +157,14 @@ const Header: React.FC = () => {
         >
           {isMobileOpen ? <BiX size={24} /> : <BiMenu size={24} />}
         </button>
+        </div>
       </div>
 
       <div className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden border-t border-gray-200/30 glass-effect ${isMobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
         <div className="px-4 sm:px-6 py-4 space-y-4">
+          
           <div className="flex flex-col space-y-2">
-            <ThemeToggle />
+          
             {navigationLinks}
           </div>
           <div className="pt-4 border-t border-gray-200/30 flex flex-col space-y-3">
