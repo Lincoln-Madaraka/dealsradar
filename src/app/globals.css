@@ -214,6 +214,20 @@ body {
   color: transparent;
   font-weight: 800;
 }
+.text-gradient-dark {
+  background: linear-gradient(90deg,
+      #ffffff 0%,
+      #d6c8b0 20%,
+      #7a3200 40%,
+      #fe9900 60%,
+      #f26522 80%,
+      #fff0e0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
 
 .title-gradient {
   background: linear-gradient(90deg,
