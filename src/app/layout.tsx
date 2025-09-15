@@ -26,10 +26,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        {/* Run before React hydration to avoid flash */}
-        <script dangerouslySetInnerHTML={{ __html: setInitialThemeScript }} />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider>
         <Header />
