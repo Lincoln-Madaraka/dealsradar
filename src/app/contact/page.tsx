@@ -20,7 +20,7 @@ const Contact = () => {
         <div className="flex items-center justify-center gap-3">
           <Mail className="text-primary" />
           <a
-            href="mailto:support@dealsradar.com"
+            href="mailto:madarakalincoln48@gmail.com"
             className="hover:text-primary transition text-gray-100"
           >
             support@dealsradar.com
@@ -29,7 +29,7 @@ const Contact = () => {
 
         <div className="flex items-center justify-center gap-3">
           <Phone className="text-primary" />
-          <span className="text-gray-100">+254 712 345 678</span>
+          <span className="text-gray-100">+254723012311</span>
         </div>
 
         <div className="flex items-center justify-center gap-3">
@@ -47,7 +47,7 @@ const Contact = () => {
         <h2 className="text-2xl font-semibold mb-4">Connect with us</h2>
         <div className="flex gap-5 justify-center">
           <a
-            href="https://wa.me/254712345678"
+            href="https://wa.me/254723012311"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition"
@@ -56,7 +56,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://facebook.com/dealsradar"
+            href="https://hello-lincoln-prime.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition"
@@ -65,7 +65,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://instagram.com/dealsradar"
+            href="https://hello-lincoln-prime.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition"
@@ -74,7 +74,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://twitter.com/dealsradar"
+            href="https://twitter.com/syntaxrtx"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition"
@@ -91,7 +91,7 @@ const Contact = () => {
           </a>
 
           <a
-            href="https://linkedin.com/company/dealsradar"
+            href="https://hello-lincoln-prime.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary transition"

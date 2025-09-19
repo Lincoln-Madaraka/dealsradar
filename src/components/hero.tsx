@@ -15,7 +15,7 @@ const Hero = () => {
         "Discover real-time promotions from Naivas, Quickmart, Carrefour and more — all in one place.",
       subtitle:
         "Search, compare, and bookmark offers on groceries, electronics, and household items near you.",
-      backgroundImage: "/hero-supermarket.jpg", 
+      backgroundImage: "/hero-supermarket.jpg", // Replace with a vibrant store aisle or shopping cart image
       buttonText: "Browse Deals",
     },
     {
@@ -62,7 +62,7 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative h-[80vh] overflow-hidden mt-16 dark:bg-black">
+      <section className="relative h-[80vh] overflow-hidden mt-16">
         {/* Background Images with Transitions */}
         {slides.map((slide, index) => (
           <div
@@ -76,8 +76,7 @@ const Hero = () => {
                 backgroundImage: `url(${slide.backgroundImage})`,
               }}
             />
-            <div className="absolute inset-0 bg-white/20 dark:bg-black/50 transition-colors duration-300" />
-
+            <div className="absolute inset-0 bg-black/40" />
           </div>
         ))}
 

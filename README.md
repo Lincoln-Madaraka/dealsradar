@@ -51,3 +51,11 @@
 ├── package.json          # Project dependencies and scripts
 └── tsconfig.json         # TypeScript configuration
 ```
+### Team
+Built with ❤️ by:
+```bash
+Lincoln Madaraka
+Sandrah Lewa
+Harvey Kisiangani
+Naftali Bosire
+```

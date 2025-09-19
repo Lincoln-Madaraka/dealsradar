@@ -102,12 +102,12 @@ const Footer: React.FC<FooterProps> = ({ className = "" }) => {
                             &copy; {currentYear} Deals Radar. All rights reserved.
                         </p>
                         <p className="text-xs text-slate-400">
-                            Deals Radar copyrighted by{" "}
+                            Credits {" "}
                             <Link
-                                href="https://hello-lincoln-prime.vercel.app/projects"
+                                href="https://hello-lincoln-prime.vercel.app/"
                                 className="text-orange-500 hover:text-orange-400 hover:underline transition-colors duration-200"
                             >
-                             Lincoln Madaraka
+                                @LincolnMadaraka
                             </Link>
                         </p>
                     </div>

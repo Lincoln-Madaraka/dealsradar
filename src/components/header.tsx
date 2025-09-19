@@ -1,12 +1,11 @@
-// src/components/header.tsx
 "use client";
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BiMenu, BiX } from "react-icons/bi";
-import ThemeToggle from "@/components/ThemeToggle";
+import { useEffect, useState, useCallback, useRef } from "react";
+import ThemeToggle from '@/components/ThemeToggle';
 
 const navLinks = [
   { label: "Trending Offers", href: "/" },
@@ -16,7 +15,7 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
-const Header: React.FC = () => {
+const Header = () => {
   const pathname = usePathname();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -50,13 +49,14 @@ const Header: React.FC = () => {
       return;
     }
 
+    // Show on scroll (down or up)
     setIsVisible(true);
     clearTimeout(timeoutRef.current!);
     timeoutRef.current = setTimeout(() => setIsVisible(false), 3000);
   }, [pathname]);
 
   useEffect(() => {
-    const handle = () => requestAnimationFrame(handleScroll);
+    const handle=() => requestAnimationFrame(handleScroll);
     window.addEventListener("scroll", handle, { passive: true });
     window.addEventListener("resize", handleScroll);
 
@@ -101,7 +101,8 @@ const Header: React.FC = () => {
         key={href}
         href={href}
         onClick={() => setIsMobileOpen(false)}
-        className={`relative px-3 py-2 rounded-lg text-sm lg:text-base font-medium transition-all hover:text-primary hover:bg-gray-100/60 hover:scale-105 active:scale-95 ${isActive ? "text-primary bg-primary/5" : "text-gray-700"}`}
+        className={`relative px-3 py-2 rounded-lg text-sm lg:text-base font-medium transition-all hover:text-primary hover:bg-gray-100/60 hover:scale-105 active:scale-95 ${isActive ? "text-primary bg-primary/5" : "text-gray-700"
+          }`}
         aria-current={isActive ? "page" : undefined}
       >
         {label}
@@ -118,10 +119,11 @@ const Header: React.FC = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled ? "border-b border-gray-200/50 backdrop-blur-md" : "backdrop-blur-sm"} ${isVisible ? "translate-y-0" : "-translate-y-full"} glass-effect dark:bg-gray-800`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${isScrolled ? "border-b border-gray-200/50 backdrop-blur-md" : "backdrop-blur-sm"
+        } ${isVisible ? "translate-y-0" : "-translate-y-full"} glass-effect`}
       role="navigation"
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3 ">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 py-3">
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/logo.png"
@@ -132,15 +134,14 @@ const Header: React.FC = () => {
             priority
           />
           <div className="hidden sm:block">
-            <h1 className="font-bold text-lg lg:text-xl text-gradient truncate">DealsRadar</h1>
-            <p className="text-xs lg:text-sm text-gray-500 -mt-1 truncate dark:text-white italic">Shop Smart, Save Hard</p>
+            <h1 className="font-bold text-lg lg:text-xl text-black truncate">DealsRadar</h1>
+            <p className="text-xs lg:text-sm text-gray-900 -mt-1 truncate">Shop Smart, Save Hard</p>
           </div>
         </Link>
 
         <div className="hidden lg:flex gap-4">{navigationLinks}</div>
 
-        <div className="hidden lg:flex gap-3 items-center">
-          <ThemeToggle />
+        <div className="hidden lg:flex gap-3">
           <Link href="/login" className="px-4 py-2 text-sm text-gray-700 rounded-lg hover:bg-gray-100/50 transition">
             Login
           </Link>
@@ -148,8 +149,7 @@ const Header: React.FC = () => {
             Sign Up
           </Link>
         </div>
-        <div className="flex items-center gap-2 lg:hidden">
-        <ThemeToggle />
+
         <button
           onClick={() => setIsMobileOpen(!isMobileOpen)}
           aria-label={isMobileOpen ? "Close menu" : "Open menu"}
@@ -157,14 +157,15 @@ const Header: React.FC = () => {
         >
           {isMobileOpen ? <BiX size={24} /> : <BiMenu size={24} />}
         </button>
-        </div>
       </div>
 
-      <div className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden border-t border-gray-200/30 glass-effect ${isMobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"}`}>
+      <div
+        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden border-t border-gray-200/30 glass-effect ${isMobileOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+      >
         <div className="px-4 sm:px-6 py-4 space-y-4">
-          
           <div className="flex flex-col space-y-2">
-          
+            <ThemeToggle />
             {navigationLinks}
           </div>
           <div className="pt-4 border-t border-gray-200/30 flex flex-col space-y-3">
